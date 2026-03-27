@@ -1,0 +1,43 @@
+{
+  "id": "rules-fire-safety-v1",
+  "siteId": "site-london-001",
+  "name": "London HQ – Fire & Lifting Rules",
+  "version": 1,
+  "createdAt": "2026-03-26T00:00:00.000Z",
+  "createdByUserId": "admin-123",
+  "rules": [
+    {
+      "id": "rule-fire-rating-30",
+      "siteId": "site-london-001",
+      "version": 1,
+      "field": "fire_rating_minutes",
+      "operator": "GREATER_THAN_OR_EQUAL",
+      "value": 30,
+      "description": "Fire-rating must be ≥ 30 min",
+      "severity": "HIGH",
+      "enabled": true
+    },
+    {
+      "id": "rule-asbestos-flagged",
+      "siteId": "site-london-001",
+      "version": 1,
+      "field": "asbestos_present",
+      "operator": "EQUALS",
+      "value": true,
+      "description": "Asbestos presence must be explicitly flagged in the document.",
+      "severity": "CRITICAL",
+      "enabled": true
+    },
+    {
+      "id": "rule-max-crane-load",
+      "siteId": "site-london-001",
+      "version": 1,
+      "field": "max_crane_load_t",
+      "operator": "LESS_THAN_OR_EQUAL",
+      "value": 10,
+      "description": "Maximum crane load must be ≤ 10 t",
+      "severity": "HIGH",
+      "enabled": true
+    }
+  ]
+}
